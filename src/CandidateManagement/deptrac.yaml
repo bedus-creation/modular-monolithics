@@ -1,0 +1,20 @@
+deptrac:
+    paths:
+        - ./src/CandidateManagement
+    layers:
+        -   name: CandidateManagement
+            collectors:
+                -   type: className
+                    value: Src\\CandidateManagement\\.*
+        -   name: App
+            collectors:
+                -   type: className
+                    value: App\\.*
+        -   name: Laravel
+            collectors:
+                -   type: className
+                    regex: (Laravel|Illuminate)\\.*
+    ruleset:
+        CandidateManagement:
+            - App
+            - Laravel

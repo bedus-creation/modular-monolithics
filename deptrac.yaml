@@ -1,0 +1,19 @@
+deptrac:
+    paths:
+        - ./app
+        - ./src
+    layers:
+        -   name: App
+            collectors:
+                -   type: className
+                    value: App\\.*
+        -   name: Laravel
+            collectors:
+                -   type: className
+                    regex: (Laravel|Illuminate)\\.*
+    ruleset:
+        App:
+            - Laravel
+
+imports:
+    - src/CandidateManagement/deptrac.yaml

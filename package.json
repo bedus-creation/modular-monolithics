@@ -1,0 +1,26 @@
+{
+    "private": true,
+    "scripts": {
+        "dev": "vite",
+        "dev:candidate-management": "vite --config ./src/CandidateManagement/vite.config.ts",
+        "dev:candidate-pool": "vite --config ./src/CandidateManagement/vite.config.ts",
+        "build:candidate-management": "vite build --config ./src/CandidateManagement/vite.config.ts",
+        "build:candidate-pool": "vite build --config ./src/CandidatePool/vite.config.ts",
+        "build": "vite build",
+        "build:all": "yarn build:candidate-pool && yarn build:candidate-management"
+    },
+    "devDependencies": {
+        "@vitejs/plugin-vue": "^3.1.0",
+        "@vue/compiler-sfc": "^3.2.39",
+        "autoprefixer": "^10.4.11",
+        "postcss": "^8.4.16",
+        "tailwindcss": "^3.1.8",
+        "vite": "^3.1.1",
+        "vite-plugin-laravel": "^0.2.2"
+    },
+    "dependencies": {
+        "vue": "^3.2.36",
+        "@inertiajs/inertia": "^0.11.0",
+        "@inertiajs/inertia-vue3": "^0.6.0"
+    }
+}
